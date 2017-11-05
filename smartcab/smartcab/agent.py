@@ -44,9 +44,9 @@ class LearningAgent(Agent):
             self.alpha = 0
             self.epsilon = 0
         else:
-            self.epsilon = np.exp(-0.1 * self.t) #self.epsilon - 0.05
+            approx_num_trials = 2000
+            self.epsilon = self.epsilon = np.cos(1. / approx_num_trials * np.pi / 2 * self.t)
             self.t += 1
-        return None
 
     def build_state(self):
         """ The build_state function is called when the agent requests data from the
@@ -67,7 +67,7 @@ class LearningAgent(Agent):
         # constraints in order for you to learn how to adjust epsilon and alpha, and thus learn about the balance between exploration and exploitation.
         # With the hand-engineered features, this learning process gets entirely negated.
         # Set 'state' as a tuple of relevant data for the agent
-        return (waypoint, inputs["light"], inputs["oncoming"])
+        return (waypoint, inputs["light"], inputs["oncoming"], inputs["left"], inputs["right"])
 
 
     def get_maxQ(self, state):
@@ -131,15 +131,14 @@ class LearningAgent(Agent):
         """ The learn function is called after the agent completes an action and
             receives a reward. This function does not consider future rewards
             when conducting learning. """
-
         ###########
         ## TO DO ##
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-        currentQ = self.Q[state][action]
-        self.Q[state][action] = (1 - self.alpha) * currentQ + self.alpha * reward
-        return
+        if self.learning:
+            currentQ = self.Q[state][action]
+            self.Q[state][action] = (1 - self.alpha) * currentQ + self.alpha * reward
 
 
     def update(self):
@@ -174,7 +173,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning=True, alpha=0.4)
+    agent = env.create_agent(LearningAgent, learning=True, alpha=0.4) #alpha=0.4
 
     ##############
     # Follow the driving agent
@@ -196,7 +195,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=10, tolerance=0.01)
+    sim.run(n_test=10, tolerance=0.0)#tolerance=0.01
 
 
 if __name__ == '__main__':
