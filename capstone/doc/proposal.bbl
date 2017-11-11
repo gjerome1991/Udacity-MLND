@@ -1,0 +1,43 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Golbeck(2016)]{golbeck}
+Jennifer Golbeck.
+\newblock Predicting personality from social media text.
+\newblock \emph{AIS Transactions on Replication Research}, 2\penalty0
+  (1):\penalty0 2, 2016.
+
+\bibitem[Kusner et~al.(2015)Kusner, Sun, Kolkin, and Weinberger]{wmd}
+Matt Kusner, Yu~Sun, Nicholas Kolkin, and Kilian Weinberger.
+\newblock From word embeddings to document distances.
+\newblock In Francis Bach and David Blei, editors, \emph{Proceedings of the
+  32nd International Conference on Machine Learning}, volume~37 of
+  \emph{Proceedings of Machine Learning Research}, pages 957--966, Lille,
+  France, 07--09 Jul 2015. PMLR.
+\newblock URL \url{http://proceedings.mlr.press/v37/kusnerb15.html}.
+
+\bibitem[Majumder et~al.(2017)Majumder, Poria, Gelbukh, and Cambria]{dl}
+Navonil Majumder, Soujanya Poria, Alexander Gelbukh, and Erik Cambria.
+\newblock Deep learning-based document modeling for personality detection from
+  text.
+\newblock \emph{IEEE Intelligent Systems}, 32\penalty0 (2):\penalty0 74--79,
+  2017.
+
+\bibitem[Mikolov et~al.(2013)Mikolov, Chen, Corrado, and Dean]{w2v}
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Efficient estimation of word representations in vector space.
+\newblock \emph{CoRR}, abs/1301.3781, 2013.
+\newblock URL \url{http://arxiv.org/abs/1301.3781}.
+
+\bibitem[Verhoeven and Daelemans(2014)]{dutch}
+Ben Verhoeven and Walter Daelemans.
+\newblock Clips stylometry investigation (csi) corpus: A dutch corpus for the
+  detection of age, gender, personality, sentiment and deception in text.
+\newblock In \emph{LREC 2014-NINTH INTERNATIONAL CONFERENCE ON LANGUAGE
+  RESOURCES AND EVALUATION}, pages 3081--3085, 2014.
+
+\end{thebibliography}
