@@ -12276,7 +12276,7 @@ judg:	3434
     <span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">types</span><span class="p">[</span><span class="n">type1</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">types</span><span class="p">[</span><span class="n">type2</span><span class="p">])]</span>
     <span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">sizes</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -13652,7 +13652,7 @@ judg:	3364
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">e_posts</span><span class="p">,</span> <span class="n">i_posts</span> <span class="o">=</span> <span class="n">balance</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">types</span><span class="p">[</span><span class="s2">&quot;extro&quot;</span><span class="p">][</span><span class="s2">&quot;posts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">types</span><span class="p">[</span><span class="s2">&quot;intro&quot;</span><span class="p">][</span><span class="s2">&quot;posts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
@@ -13670,6 +13670,7 @@ judg:	3364
 <span class="n">p_train</span><span class="p">,</span> <span class="n">p_test</span> <span class="o">=</span> <span class="n">get_train_test_samples</span><span class="p">(</span><span class="n">p_posts</span><span class="p">)</span>
 
 
+
 <span class="n">ei_vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">e_train</span><span class="p">,</span> <span class="n">e_test</span><span class="p">,</span> <span class="n">i_train</span><span class="p">,</span> <span class="n">i_test</span><span class="p">]</span>
 <span class="n">ns_vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">n_train</span><span class="p">,</span> <span class="n">n_test</span><span class="p">,</span> <span class="n">s_train</span><span class="p">,</span> <span class="n">s_test</span><span class="p">]</span>
 <span class="n">tf_vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">t_train</span><span class="p">,</span> <span class="n">t_test</span><span class="p">,</span> <span class="n">f_train</span><span class="p">,</span> <span class="n">f_test</span><span class="p">]</span>
@@ -13677,6 +13678,25 @@ judg:	3364
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1468
+489
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -20789,6 +20809,37 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;bootstrap&#39;: True, &#39;class_weight&#39;: None, &#39;criterion&#39;: &#39;gini&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_impurity_split&#39;: None, &#39;min_samples_leaf&#39;: 7, &#39;min_samples_split&#39;: 5, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 80, &#39;n_jobs&#39;: 1, &#39;oob_score&#39;: False, &#39;random_state&#39;: None, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -21783,6 +21834,150 @@ REREJKgpaRERERERkaCmpEVERERERILa/wHWtxsHPuJK4gAAAABJRU5ErkJggg==
 >
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sensitivity-Analysis">Sensitivity Analysis<a class="anchor-link" href="#Sensitivity-Analysis">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">perturb_posts</span><span class="p">(</span><span class="n">posts</span><span class="p">):</span>
+    <span class="n">perturbed</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|||&quot;</span><span class="p">)</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">perturbed</span><span class="p">)</span>
+    <span class="n">perturbed</span> <span class="o">=</span> <span class="n">perturbed</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">perturbed</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot;|||&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">perturbed</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">perturb_all</span><span class="p">(</span><span class="n">users</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">perturb_posts</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">users</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">e_perturbed</span> <span class="o">=</span> <span class="n">perturb_all</span><span class="p">(</span><span class="n">e_test</span><span class="p">)</span>
+<span class="n">i_perturbed</span> <span class="o">=</span> <span class="n">perturb_all</span><span class="p">(</span><span class="n">i_test</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w2v_e_p</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-138-2f9668bc8e31&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>len<span class="ansi-blue-fg">(</span>w2v_e_p<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;w2v_e_p&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hcf_e_p</span> <span class="o">=</span> <span class="n">transform_vectors</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="p">[</span><span class="n">get_posts_features</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">v</span><span class="p">],</span> <span class="p">[</span><span class="n">e_perturbed</span><span class="p">])</span>
+<span class="n">hcf_i_p</span> <span class="o">=</span> <span class="n">transform_vectors</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="p">[</span><span class="n">get_posts_features</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">v</span><span class="p">],</span> <span class="p">[</span><span class="n">i_perturbed</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done creating HCF perturbed&quot;</span><span class="p">)</span>
+<span class="n">w2v_e_p</span> <span class="o">=</span> <span class="n">transform_vectors</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="p">[</span><span class="n">create_w2v_vector</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">v</span><span class="p">],</span>  <span class="p">[</span><span class="n">e_perturbed</span><span class="p">])</span>
+<span class="n">w2v_i_p</span> <span class="o">=</span> <span class="n">transform_vectors</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="p">[</span><span class="n">create_w2v_vector</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">v</span><span class="p">],</span>  <span class="p">[</span><span class="n">i_perturbed</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done creating W2V perturbed&quot;</span><span class="p">)</span>
+<span class="n">bow_e_p</span> <span class="o">=</span> <span class="n">transform_vectors</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">to_bow</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="n">e_perturbed</span><span class="p">)</span>
+<span class="n">bow_i_p</span> <span class="o">=</span> <span class="n">transform_vectors</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">to_bow</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span> <span class="n">i_perturbed</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done creating BOW perturbed&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_e_p</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">w2v_e_p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bow_e_p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">hcf_e_p</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+<span class="n">v_i_p</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">w2v_i_p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bow_i_p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">hcf_i_p</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">clf_ei_c</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="o">*</span><span class="n">create_vectors_labels</span><span class="p">(</span><span class="n">v_e_p</span><span class="p">,</span> <span class="n">v_i_p</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.627811860941
+</pre>
+</div>
 </div>
 
 </div>
